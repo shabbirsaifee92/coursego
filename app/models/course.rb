@@ -4,6 +4,10 @@ class Course < ApplicationRecord
   
   has_rich_text :description
   
+  belongs_to :user
+  
+  default_scope { includes(:user) } 
+  
   def to_s
     title
   end
