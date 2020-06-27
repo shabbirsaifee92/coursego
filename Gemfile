@@ -29,3 +29,8 @@ group :test do
   gem 'webdrivers'
 end
 
+## Custom Gems
+
+## html
+gem "haml-rails", "~> 2.0"
+
