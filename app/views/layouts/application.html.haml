@@ -1,6 +1,8 @@
 !!!
 %html
   %head
+    %meta{:content => 'text/html; charset-UTF-8', 'http-equiv'=>'Content-Type'}/
+    %meta{:content => 'width=devise-width, initial-scale=1.0', :name=> "viewport"}
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Coursego
     = csrf_meta_tags
@@ -11,4 +13,5 @@
     = render 'layouts/header'
     = render 'layouts/alert_messages'
     .container
+      %p
       = yield

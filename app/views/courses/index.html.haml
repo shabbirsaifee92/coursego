@@ -1,26 +1,10 @@
 %h1
   Courses
   = @courses.size
+.card-columns
+  - @courses.each do |course|
+    = render 'courses/course', course: course
 
-%table.table
-  %thead
-    %tr
-      %th Title
-      %th Description
-      %th User
-      %th
-      %th
-      %th
-
-  %tbody
-    - @courses.each do |course|
-      %tr
-        %td= course.title
-        %td= course.description
-        %td= course.user.email
-        %td= link_to 'Show', course
-        %td= link_to 'Edit', edit_course_path(course)
-        %td= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
 
