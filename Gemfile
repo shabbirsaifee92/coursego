@@ -34,3 +34,6 @@ end
 ## html
 gem "haml-rails", "~> 2.0"
 
+## Styling
+gem 'bootstrap', '~> 4.5.0'
+gem 'jquery-rails'
