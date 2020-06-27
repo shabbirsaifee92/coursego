@@ -42,6 +42,7 @@ gem 'simple_form', '~> 5.0', '>= 5.0.2'
 
 ## Database
 gem 'faker', '~> 2.13'
+gem 'friendly_id', '~> 5.3'
 
 ## Authorization
 gem 'devise', '~> 4.7', '>= 4.7.2'
