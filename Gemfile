@@ -39,3 +39,9 @@ gem 'bootstrap', '~> 4.5.0'
 gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 5.13'
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
+
+## Database
+gem 'faker', '~> 2.13'
+
+## Authorization
+gem 'devise', '~> 4.7', '>= 4.7.2'
