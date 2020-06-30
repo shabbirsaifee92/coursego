@@ -62,4 +62,5 @@ Rails.application.configure do
   
   config.hosts << "8bc9cb5fec184d17899361cba016b425.vfs.cloud9.us-east-2.amazonaws.com"
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.delivery_method = :test
 end
