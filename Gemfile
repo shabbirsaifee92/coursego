@@ -46,3 +46,6 @@ gem 'friendly_id', '~> 5.3'
 
 ## Authorization
 gem 'devise', '~> 4.7', '>= 4.7.2'
+
+## Search
+gem 'ransack'
