@@ -2,19 +2,24 @@
   - @users.each do |user|
     = render 'users/user', user: user
     
-= search_form_for @users do |f|
-  = f.search_field :email_cont
-  = f.submit
+.form-inline    
+  = search_form_for @q do |f|
+    = f.search_field :email_cont, placeholder: 'email'
+    = f.search_field :sign_in_count_eq, placeholder: 'Sign in count'
+    = f.search_field :email_or_sign_in_count_eq, placeholder: 'Email or Sign in count'
+    = f.submit
+  .ml-2
+  = link_to 'Refresh', users_path
   
 %table.table.table-bordered
   %thead
     %tr
       %th id
-      %th email
+      %th= sort_link(@q, :email)
       %th created_at
       %th= 'sign_in_count'.humanize 
       %th= 'current_sign_in_at'.humanize
-      %th= 'last_sign_in_at'.humaize    
+      %th= 'last_sign_in_at'.humanize    
       %th= 'current_sign_in_ip'.humanize
       %th= 'last_sign_in_ip'.humanize
   %tbody

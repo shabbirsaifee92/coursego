@@ -1,7 +1,19 @@
 %h1
   Courses
   = @courses.size
-.card-columns
-  - @courses.each do |course|
-    = render 'courses/course', course: course
-
+  
+.row
+  .col-md-2
+    = search_form_for @ransack_courses, as: :courses_search, url: courses_path do |f|
+      = f.label :title
+      = f.search_field :title_cont, placeholder: 'Title', class: 'form-control form-control-sm'
+      = f.label :level
+      = f.select :level_cont, Course.levels, include_blank: true, class: 'form-control form-control-sm'
+      = f.label :language
+      = f.select :language_cont, Course.languages, include_blank: true, class: 'form-control form-control-sm'
+      = f.submit
+    = link_to 'Refresh', courses_path
+  .col-md-10
+    .card-columns
+      - @courses.each do |course|
+        = render 'courses/course', course: course

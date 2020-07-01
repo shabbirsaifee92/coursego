@@ -23,9 +23,9 @@
             .fa.fa-users
             Users    
       .form-inline.my-2.my-lg-0
-        = form_tag(courses_path, method: :get) do
+        = search_form_for @ransack_courses, as: :courses_search, url: courses_path do |f|
           .input-group
-            = text_field_tag :title, params[:title], autocomplete: 'off', placeholder: "Search", class: 'form-control-sm'
+            = f.search_field :title_cont, autocomplete: 'off', placeholder: "Search", class: 'form-control-sm'
             %span.input-group-append
               %button.btn.btn-primary.btn-sm{:type => "submit"}
                 %span.fa.fa-search{"aria-hidden" => "true"}

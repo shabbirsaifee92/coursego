@@ -1,4 +1,6 @@
 class Course < ApplicationRecord
+  include PublicActivity::Model
+  
   validates :title, :short_description, :language, :price, :level, presence: true
   validates :description, presence: true, length: { minimum: 5 }
   
@@ -10,6 +12,14 @@ class Course < ApplicationRecord
   belongs_to :user
   
   default_scope { includes(:user) } 
+  
+  def self.languages
+     [ "English", "Polish", "French"]
+  end
+  
+  def self.levels
+    [ "Beginner", "Intermediate", "Advanced", "N/A"]
+  end
   
   def to_s
     title

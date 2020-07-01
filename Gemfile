@@ -49,3 +49,6 @@ gem 'devise', '~> 4.7', '>= 4.7.2'
 
 ## Search
 gem 'ransack'
+
+## Administration
+gem 'public_activity', '~> 1.6', '>= 1.6.4'
