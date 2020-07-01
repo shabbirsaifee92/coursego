@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   resources :courses
   get 'home/index'
   root 'home#index'
+  get 'home/activity', as: :activity
   resources :users, only: [:index]
 end

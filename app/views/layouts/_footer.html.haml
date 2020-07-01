@@ -1,0 +1,20 @@
+%hr
+%footer.bg-dark
+  .container
+    .row
+      .col-md-4
+        Copyright
+        &copy;
+        = Time.zone.now.year
+        .row
+        .fa.fa-envelope
+        = mail_to 'ssaifee.1992@gmail.com'
+      .col-md-4
+        Privacy Policy
+        .row
+        Term and Conditions
+      .col-md-4
+        About Us
+        .row
+        = link_to 'Teach on Edward Teaches', new_course_path
+  %br      
